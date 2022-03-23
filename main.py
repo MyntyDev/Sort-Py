@@ -41,7 +41,7 @@ for filename in os.listdir(current_dir):
 
     # We add one beacuse we don't want the dot in the folder name (or else the folder becomes hidden)
     
-    extension = filename[last+1:]
+    extension = filename[last+1:].lower()
     name = filename[:-len(extension)-1]
 
     if not extensions_to_exclude is None:
