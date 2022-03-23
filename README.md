@@ -1,6 +1,8 @@
 ## Sort-By
 Python script to organize your folder.
 
+![Screenshot](/screenshots/showcase.png)
+
 # Installation
 
 Run these commands to run the script:
