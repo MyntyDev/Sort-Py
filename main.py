@@ -6,6 +6,7 @@ current_dir = os.getcwd()
 
 def clean_up_extensions(list_of_extensions):
     try:
+        # The reason we are replacing every dot with nothing is because our code removes the dots as well
         return [x.replace(".", "") for x in list_of_extensions]
     except TypeError:
         return None
@@ -44,7 +45,7 @@ for filename in os.listdir(current_dir):
     name = filename[:-len(extension)-1]
 
     if not extensions_to_exclude is None:
-        # The reason we are replacing every dot with nothing is because our code removes the dots as well
+        
         if extension in extensions_to_exclude:
             continue 
 
@@ -54,7 +55,11 @@ for filename in os.listdir(current_dir):
         os.makedirs(organize_folder)
         folders_created += 1
 
-    shutil.move(f"./{filename}", organize_folder)
+    try:
+        shutil.move(f"./{filename}", organize_folder)
+    except shutil.Error:
+        print(f"./{extension}/{filename} already exists! Skipping.")
+
     files_moved += 1 
 
 
