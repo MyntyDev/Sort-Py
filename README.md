@@ -6,7 +6,9 @@ Python script to organize your folder.
 Run these commands to run the script:
 
 ```
-python3 main.py
+git clone https://github.com/MyntyDev/Sort-Py
+cd  Sort-Py 
+python3 main.py -h
 ```
 
 # Features
@@ -17,8 +19,12 @@ python3 main.py
 
 # Adding to path
 
-On mac, you can go into your ``.zshrc`` file and put this in:
+On mac, you can go into your ``.zshrc`` or ``.bashrc`` or ``.bash_profile`` file and put this in:
 
 ```
 alias sortpy="python3 path/to/file/main.py"
 ``` 
+
+On linux, you can go into your ``.bashrc`` file and put the same command in. 
+
+I am not sure how to do this on windows, however if anyone knows please let me know and I will update this page.
