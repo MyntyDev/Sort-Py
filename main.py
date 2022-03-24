@@ -59,6 +59,7 @@ for filename in os.listdir(current_dir):
         shutil.move(f"./{filename}", organize_folder)
     except shutil.Error:
         print(f"./{extension}/{filename} already exists! Skipping.")
+        continue
 
     files_moved += 1 
 
