@@ -37,7 +37,11 @@ for filename in os.listdir(current_dir):
         continue
 
     # The reason we get the last occurence of the dot is incase the file name is like: filename.file.txt
-    last = filename.rindex(".")
+    try:
+        last = filename.rindex(".")
+    except ValueError:
+        # This line is temporary, I will fix this soon.
+        continue 
 
     # We add one beacuse we don't want the dot in the folder name (or else the folder becomes hidden)
     
